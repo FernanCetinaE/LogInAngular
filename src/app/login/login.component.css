@@ -1,0 +1,19 @@
+.center_div{
+    margin: 0 auto;
+    width: 5%; /* value of your choice which suits your alignment */
+    padding-top: 10%;
+    height: 100vh;
+}
+
+body, html {
+    height: 100%;
+    display: grid;
+}
+
+span { /* thing to center */
+    margin: auto;
+}
+
+.center-me {
+    margin: auto;
+}
