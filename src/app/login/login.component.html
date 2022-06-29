@@ -1,28 +1,29 @@
 <div class="container center_div">
-    <h2>LOGIN</h2>
+    <h1 style="font-family: Georgia, serif;">Login 🏠</h1>
 
-    <form [formGroup]="login">
+    <form [formGroup]="login" class="col text-center" >
 
-        <div class="col-12">
-            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Name</label>
-            <div class="col-sm-10">
+        <div>
+            <label for="colFormLabelLg" class=" col-form-label col-form-label-lg">Name:</label>
+            <div style="align-items: center" >
                 <input type="text" placeholder="Enter name" formControlName="name">
             </div>
         </div>
 
-        <div class="col-12">
-            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Password</label>
-            <div class="col-sm-10">
+        <div>
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Password:</label>
+            <div style="align-items: center">
                 <input type="password" placeholder="Enter password" formControlName="password">
             </div>
         </div>
 
-        <div class="d-grid gap-2 d-lg-flex">
-            <div class="col text-center">
-                <button click="loginSubmit(login.value)" [disabled]="login.invalid" type="button" class="btn btn-primary">Login</button>
+        <br><br>
+        <div>
+            <div class="col text-center" >
+                <button (click)="loginSubmit(login.value)" [disabled]="login.invalid" type="button" class="btn btn-success">Log in 💡</button>
             </div>
-            <div class="col text-center">
-                <button click="goToSignUp()" [disabled]="login.invalid" type="button" class="btn btn-primary">SignUp</button>
+            <div class="col text-center" style="padding: 1.4%;">
+                <button (click)="goToSignUp()" type="button" class="btn btn-primary">Sign Up✨</button>
             </div>
         </div>
         

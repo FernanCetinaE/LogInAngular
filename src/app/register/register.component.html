@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div class="container center_div">
+    <h1 style="font-family: Georgia, serif;">Register 🚀</h1>
+
+    <form [formGroup]="login" class="col text-center" >
+
+        <div >
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Name:</label>
+            <div style="align-items: center">
+                <input type="text" placeholder="Enter name" formControlName="name">
+            </div>
+        </div>
+
+        <div>
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Password:</label>
+            <div style="align-items: center">
+                <input type="password" placeholder="Enter password" formControlName="password">
+            </div>
+        </div>
+
+        <br><br>
+        <div>
+            <div class="col text-center">
+                <button (click)="registerSubmit(login.value)" [disabled]="login.invalid" type="button" class="btn btn-success">Sign Up✔️</button>
+            </div>
+            <div  class="col text-center" style="padding: 1.4%;">
+                <button (click)="goToLogIn()" type="button" class="btn btn-primary">Log in ⬅️</button>
+            </div>
+        </div>
+        
+    </form>
+</div>
