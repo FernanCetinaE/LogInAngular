@@ -6,23 +6,24 @@
         <div>
             <label for="colFormLabelLg" class=" col-form-label col-form-label-lg">Name:</label>
             <div style="align-items: center" >
-                <input type="text" placeholder="Enter name" formControlName="name">
+                <input type="text" placeholder="Enter name" formControlName="name" class="form-control;col text-center" style="width: 22%">
             </div>
         </div>
 
         <div>
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Password:</label>
             <div style="align-items: center">
-                <input type="password" placeholder="Enter password" formControlName="password">
+                <input type="password" placeholder="Enter password" formControlName="password" class="form-control;col text-center" style="width: 22%">
             </div>
         </div>
 
         <br><br>
+        <div *ngIf="errorMessage" class="col text-center" style="color:red;">{{errorMessage}}</div>
         <div>
-            <div class="col text-center" >
+            <div class="col text-center" style="padding-top: 1.41%;">
                 <button (click)="loginSubmit(login.value)" [disabled]="login.invalid" type="button" class="btn btn-success">Log in 💡</button>
             </div>
-            <div class="col text-center" style="padding: 1.4%;">
+            <div class="col text-center" style="padding-top: 1.41%;">
                 <button (click)="goToSignUp()" type="button" class="btn btn-primary">Sign Up✨</button>
             </div>
         </div>

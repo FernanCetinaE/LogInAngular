@@ -18,11 +18,12 @@
         </div>
 
         <br><br>
+        <div *ngIf="errorMessage" class="col text-center" [ngStyle]="{'color': errorColor ? 'red':'green'} ">{{errorMessage}}</div>
         <div>
-            <div class="col text-center">
+            <div class="col text-center" style="padding: 1.4%;">
                 <button (click)="registerSubmit(login.value)" [disabled]="login.invalid" type="button" class="btn btn-success">Sign Up✔️</button>
             </div>
-            <div  class="col text-center" style="padding: 1.4%;">
+            <div  class="col text-center">
                 <button (click)="goToLogIn()" type="button" class="btn btn-primary">Log in ⬅️</button>
             </div>
         </div>
